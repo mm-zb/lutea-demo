@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var password: String = ""
-    @State var confirm_password: String = ""
-    @State var email: String = ""
-    
     @State var model = RegisterViewViewModel()
     var body: some View {
             VStack {
@@ -21,10 +17,18 @@ struct RegisterView: View {
                     background: Color.green,
                 ).offset(y: -UIScreen.main.bounds.height * 0.05)
                 
+                
+                if !model.error_message.isEmpty {
+                    Text(model.error_message).foregroundColor(Color.red)
+                }
+
                 Form {
                     TextField("Email", text: $model.email)
+                        .textContentType(.emailAddress)
                     SecureField("Password", text: $model.password)
+                        .textContentType(.oneTimeCode) // to prevent strong password suggestions
                     SecureField("Confirm Password", text: $model.confirm_password)
+                        .textContentType(.oneTimeCode)
                     
                     LDButtonView(
                         title: "Sign Up",
