@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct LDButtonView: View {
+    let title: String
+    let bgcolour: Color
+    let fgcolour: Color
+    let action: () -> Void
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            action()
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(bgcolour)
+                Text(title)
+                    .foregroundColor(fgcolour)
+                    .bold()
+            }
+        }.padding()
     }
 }
 
 #Preview {
-    LDButtonView()
+    LDButtonView(
+        title: "Test",
+        bgcolour: Color.green,
+        fgcolour: Color.black,
+        action: {},
+    )
 }

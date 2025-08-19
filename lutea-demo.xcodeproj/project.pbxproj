@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5DA26BA92E539F4E005C3843 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA26BA82E539F4E005C3843 /* FirebaseAnalytics */; };
+		5DA26BAB2E539F4E005C3843 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA26BAA2E539F4E005C3843 /* FirebaseAuth */; };
+		5DA26BAD2E539F4E005C3843 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA26BAC2E539F4E005C3843 /* FirebaseFirestore */; };
+		5DA26BAF2E539F4E005C3843 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA26BAE2E539F4E005C3843 /* FirebaseFirestoreCombine-Community */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5DA26B772E5388DE005C3843 /* lutea-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lutea-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA26BA92E539F4E005C3843 /* FirebaseAnalytics in Frameworks */,
+				5DA26BAF2E539F4E005C3843 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				5DA26BAB2E539F4E005C3843 /* FirebaseAuth in Frameworks */,
+				5DA26BAD2E539F4E005C3843 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,10 @@
 			);
 			name = "lutea-demo";
 			packageProductDependencies = (
+				5DA26BA82E539F4E005C3843 /* FirebaseAnalytics */,
+				5DA26BAA2E539F4E005C3843 /* FirebaseAuth */,
+				5DA26BAC2E539F4E005C3843 /* FirebaseFirestore */,
+				5DA26BAE2E539F4E005C3843 /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = "lutea-demo";
 			productReference = 5DA26B772E5388DE005C3843 /* lutea-demo.app */;
@@ -94,6 +109,9 @@
 			);
 			mainGroup = 5DA26B6E2E5388DE005C3843;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5DA26B782E5388DE005C3843 /* Products */;
 			projectDirPath = "";
@@ -320,6 +338,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DA26BA82E539F4E005C3843 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5DA26BAA2E539F4E005C3843 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5DA26BAC2E539F4E005C3843 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5DA26BAE2E539F4E005C3843 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA26BA72E539F4E005C3843 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DA26B6F2E5388DE005C3843 /* Project object */;
 }

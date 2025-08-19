@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+
+class RegisterViewViewModel: ObservableObject {
+    @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var confirm_password: String = ""
+    
+    func register() {
+        
+    }
+    
+    private func login() {
+        
+    }
+}
